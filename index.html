@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scrip.js"></script>   
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="w-100">
+        <!-- Header -->
+        <header class="container py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-4 col-md-3 col-lg-2 text-md-center" id="div_logo">
+                    <a href="/">
+                        <img src="/icon/bang-dinh-dong-hang-logo-01.png" alt="Logo" width="100" height="50">
+                    </a>
+                </div>
+
+                <!-- Thanh tìm kiếm -->
+                <div class="col-14 col-md-6 col-lg-7 text-md-center" id="div_input_search">
+                    <div class="border border-2 rounded-3 d-flex align-items-center">
+                        <input type="text" class="form-control border-0" placeholder="Tìm kiếm sản phẩm, danh mục..." id="search">
+                        <button class="bg-white border-0 p-2 me-1">
+                            <img src="/icon/search.svg" alt="search-icon" width="25">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Giỏ hàng -->
+                <div class="col-4 col-md-3 col-lg-2 text-end" id="div_icon_cart">
+                    <a href="#" class="position-relative">
+                        <img src="/icon/cart-4-svgrepo-com.svg" width="40" alt="cart-icon">
+                        <span class="badge bg-dark position-absolute top-0 start-100 translate-middle">2</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="menuButton">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="d-flex d-none justify-content-between" id="nav-input">
+                        <div class="d-flex border border-2 rounded-3 mt-5">
+                            <input type="text" class="form-control border-0" placeholder="Tìm kiếm sản phẩm, danh mục..." id="search">
+                            <button class="bg-white border-0 p-2 me-1">
+                                <img src="/icon/search.svg" alt="search-icon" width="25">
+                            </button>
+                        </div>
+                        <div>
+                            <button id="exit" class="border-0 bg-light">X</button>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link active">TRANG CHỦ</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">GIỚI THIỆU</a></li>
+                        <!-- BĂNG DÍNH -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">BĂNG DÍNH</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Băng dính vàng</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính đục</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính trong</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính hàng dễ vỡ</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính văn phòng</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính in logo</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính 2 mặt</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính giấy</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính vải</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính điện</a></li>
+                                <li><a class="dropdown-item" href="#">Băng dính dán nền</a></li>
+                                <li><a class="dropdown-item" href="#">Dụng cụ cắt băng dính</a></li>     
+                            </ul>
+                        </li>
+        
+                        <!-- HỘP CARTON -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">HỘP CARTON</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Hộp carton nắp đối</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp carton nắp gài</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp carton nắp rời</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp carton nắp chồm</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp in offset</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp đựng trà</a></li>
+                                <li><a class="dropdown-item" href="#">Hộp viên kê bê tông</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- SẢN PHẨM KHÁC -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SẢN PHẨM KHÁC</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Bao bì túi giấy</a></li>
+                                <li><a class="dropdown-item" href="#">Xốp nổ (bóng khí)</a></li>
+                                <li><a class="dropdown-item" href="#">Xốp PE Foam</a></li>
+                                <li><a class="dropdown-item" href="#">Màng PE</a></li>
+                                <li><a class="dropdown-item" href="#">Túi niêm phong</a></li>
+                            </ul>
+                        </li>
+        
+                        <!-- DỊCH VỤ -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DỊCH VỤ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Thiết kế in ấn bao bì</a></li>
+                                <li><a class="dropdown-item" href="#">In tờ rơi</a></li>
+                                <li><a class="dropdown-item" href="#">In logo</a></li>
+                                <li><a class="dropdown-item" href="#">In thường</a></li>
+                                <li><a class="dropdown-item" href="#">In offset</a></li>
+                            </ul>
+                        </li>
+        
+                        <li class="nav-item"><a href="#" class="nav-link">TIN TỨC</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">LIÊN HỆ</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- section -->
+        <div class="section-content container mt-2" id="section">
+            <div class="row gy-3">
+                <div class="col-12 col-md-8">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/img/bang-dinh-dong-hang-1.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/bang-dinh-dong-hang-2.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/bang-dinh-dong-hang-3.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cột chứa 2 hình ảnh -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-between">
+                    <img src="/img/bang-dinh-dong-hang-4.jpg" class="img-fluid mb-3" alt="">
+                    <img src="/img/bang-dinh-dong-hang-5.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Section với video và mô tả -->
+        <div class="section-content w-100 bg-light mt-4 py-4">
+            <div class="container">
+                <div class="row d-flex align-items-center" >
+                    <div class="col-12 col-md-6" id="video">
+                        <iframe class="w-100 " height='315'src="https://www.youtube.com/embed/EDvsnhQgP9Q" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-12 col-md-6 bg-white " id="content">
+                        <h4>Băng dính đóng hàng</h4>
+                        <p><a href="#" class="text-decoration-none">Bangdinhdonghang.com</a> là Website thương mại điện tử trực thuộc công ty cổ phần Hupuna Group, chuyên cung cấp băng dính đóng hàng, hộp (thùng) carton, màng bọc chống sốc… và các phụ kiện đóng hàng khác. Chúng tôi còn cung cấp dịch vụ tư vấn, thiết kế, in ấn bao bì giúp thương hiệu tiếp cận khách hàng dễ dàng hơn.</p>
+                        <div class="text-end mt-3">
+                            <a href="#" class="text-decoration-none">Chi tiết >>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  section sản phẩm nổi bật-->
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col-8 col-md-10 border-bottom">
+                    <h4>SẢN PHẨM NỔI BẬT</h4>
+                </div>
+                <div class="col-4 col-md-2 text-end">
+                    <a href="#" class="text-decoration-none">Xem tất cả >>></a>
+                </div>
+            </div>
+        
+            <div class="row mt-4 gx-3 gy-4">
+                <!-- Card sản phẩm -->
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
+                            <p class="fw-bold text-danger">24.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
+                            <p class="fw-bold text-danger">31.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
+                            <p class="fw-bold text-danger">63.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
+                            <p class="fw-bold text-danger">19.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
+                            <p class="fw-bold text-danger">27.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
+                            <p class="fw-bold text-danger">58.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-1 gx-3 gy-4">
+                <!-- Card sản phẩm -->
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">24.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">31.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">63.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">19.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">27.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">58.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- section băng dính đóng hàng -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-8 col-md-10 border-bottom">
+                    <h4>BĂNG DÍNH ĐÓNG HÀNG</h4>
+                </div>
+                <div class="col-4 col-md-2 text-end">
+                    <a href="#" style="text-decoration: none">Xem tất cả >>></a>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <img src="/img/bang-dinh-dong-hang-6.jpg" alt="" class="img-fluid">
+            </div>
+        
+            <div class="row mt-4 gx-3 gy-4">
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">24.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">31.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">63.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">19.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">27.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
+                            <p class="fw-bold text-danger">58.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section hộp carton đóng hàng -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-8 col-md-10 border-bottom">
+                    <h4>HỘP CARTON ĐÓNG HÀNG</h4>
+                </div>
+                <div class="col-4 col-md-2 text-end">
+                    <a href="#" style="text-decoration: none">Xem tất cả >>></a>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <img src="/img/bang-dinh-dong-hang-7.jpg" alt="" class="img-fluid">
+            </div>
+        
+            <div class="row mt-4 gx-3 gy-4">
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-nap-gai-4.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 12x8x4cm nắp gài 3...</p>
+                            <p class="fw-bold text-danger">24.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-nap-gai-5.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 30x25x6cm nắp gài 3...</p>
+                            <p class="fw-bold text-danger">31.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-doi-khau-6.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 50x30x20cm nắp đối 3...</p>
+                            <p class="fw-bold text-danger">63.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-doi-khau-7.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 25x15x15cm nắp đối 3...</p>
+                            <p class="fw-bold text-danger">19.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-doi-khau-8.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 25x15x10cm nắp đối 3...</p>
+                            <p class="fw-bold text-danger">27.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/hop-carton-doi-khau-9.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Hộp carton 20x20x15cm nắp đối 3...</p>
+                            <p class="fw-bold text-danger">58.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section sản phẩm khác-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-8 col-md-10 border-bottom">
+                    <h4>SẢN PHẨM KHÁC</h4>
+                </div>
+                <div class="col-4 col-md-2 text-end">
+                    <a href="#" style="text-decoration: none">Xem tất cả >>></a>
+                </div>
+            </div>
+            
+            <div class="row mt-4 ">
+                <img src="/img/bang-dinh-dong-hang-8.jpg" alt="" class="img-fluid">
+            </div>
+        
+            <div class="row mt-4 gx-3 gy-4">
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/dung-cu-cat-bang-dinh-10.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Dụng cụ cắt băng dính cầm...</p>
+                            <p class="fw-bold text-danger">24.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Xốp PE Foam 20mm khổ 1m...</p>
+                            <p class="fw-bold text-danger">31.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Xốp PE Foam 10mm khổ 1m...</p>
+                            <p class="fw-bold text-danger">63.500 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Xốp PE Foam 5mm khổ 1m...</p>
+                            <p class="fw-bold text-danger">19.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Xốp nổ bọc hàng 120cmx100m</p>
+                            <p class="fw-bold text-danger">27.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-6 col-md-3 col-xl-2">
+                    <div class="card border shadow-sm">
+                        <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." style="height: 170px;">
+                        <div class="card-body text-center">
+                            <p class="card-text">Xốp nổ bọc hàng 150cmx100m</p>
+                            <p class="fw-bold text-danger">58.000 ₫</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section tin tức bà viết và tin mới -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Tin tức bài viết -->
+                <div class="col-12 col-lg-8 text-center order-md-1">
+                    <div class="d-flex align-items-center justify-content-center my-3">
+                        <div class="flex-grow-1 border-bottom border-2"></div>
+                        <h4 class="mx-3">TIN TỨC BÀI VIẾT</h4>
+                        <div class="flex-grow-1 border-bottom border-2"></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between border p-2">
+                        <img src="/img/Cac-yeu-to-quan-trong-anh-huong-den-chat-luong-thung-carton-9.jpg" alt="" class="img-fluid me-1 mb-3" style="height: 280px; width: 387px;">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between mb-4  text-start">
+                                <img src="/img/news/thung-carton-dung-vai-1.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                                <p class="ps-2">Các tiêu chí in hộp đựng vải thiều chất lượng</p>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4  text-start">
+                                <img src="/img/news/hop-carton-2.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                                <p class="ps-2">Địa chỉ mua hộp carton tại Đống Đa giá rẻ, chất lượng</p>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2 text-start">
+                                <img src="/img/news/tem-nhan-decal-3.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                                <p class="ps-2">Các loại tem nhãn mác phổ biến hiện nay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-end mt-1"><a href="#" style="text-decoration:none">xem tất cả >>></a></p>
+                </div>
+        
+                <!-- Tin mới -->
+                <div class="col-12 col-lg-4 text-center order-md-2 ">
+                    <div class="d-flex align-items-center justify-content-center my-3">
+                        <div class="flex-grow-1 border-bottom border-2"></div>
+                        <h4 class="mx-3">TIN MỚI</h4>
+                        <div class="flex-grow-1 border-bottom border-2"></div>
+                    </div>
+                    <div class="d-block border p-2">
+                        <div class="d-flex justify-content-between mb-4 ms-1 text-start">
+                            <img src="/img/news/hop-carton-4.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                            <p class="ps-2 flex-grow-1 ">Mua thùng carton tại quận Hoàng Mai giá rẻ</p>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4 ms-1 text-start">
+                            <img src="/img/news/hop-carton-5.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                            <p class="ps-2 flex-grow-1">Đặt thùng carton quận Thanh Xuân theo yêu cầu</p>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2 ms-1 text-start">
+                            <img src="/img/news/Bangdinhdonghang-Xuong-phan-phoi-hop-carton-tai-Thanh-Tri-nhanh-chong-uy-tin-6.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
+                            <p class="ps-2 flex-grow-1">[MÁCH BẠN] Xưởng chuyên phân phối hộp carton tại Thanh Trì</p>
+                        </div>
+                    </div>
+                    <p class="text-end mt-1"><a href="#" style="text-decoration:none">xem tất cả >>></a></p>
+                </div>
+            </div>
+        </div>
+        <!-- section đối tác của chúng tôi -->
+        <div class="container mt-5">
+            <div class="row border-bottom border-2">
+                <h4 class="text-start">ĐỐI TÁC CỦA CHÚNG TÔI</h4>
+            </div>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-01.jpeg" class="border  rounded-2 img-flui shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-02.png" class="border rounded-2 img-fluid shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-03.png" class="border rounded-2 img-fluid shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-04.png" class="border rounded-2 img-fluid shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-05.png" class="border rounded-2 img-fluid shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 d-flex justify-content-center mb-3">
+                    <img src="/img/doitac/logo-06.png" class="border rounded-2 img-fluid shadow-sm" style="height: 75px; width: 170px;" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- đăng ký ban tin-->
+        <div class="mt-5 d-flex align-items-center py-3" style="background-color: rgb(138, 170, 138); color: white;">
+            <div class="container">
+                <div class="row align-items-center" id="Sub_to_news">
+                    <!-- Tiêu đề -->
+                    <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h4 class="mb-0">Đăng ký bản tin và nhận thông tin ưu đãi mới</h4>
+                    </div>
+                    <!-- Form đăng ký -->
+                    <div class="col-12 col-md-6">
+                        <form action="">
+                            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-end gap-2">
+                                <input type="phone" class="form-control border-0 rounded-5 px-3" placeholder="Số điện thoại" id="phone" style="height: 43px;">
+                                <input type="email" class="form-control border-0 rounded-5 px-3" placeholder="Địa chỉ Email" id="email" style="height: 43px;">
+                                <button type="submit" class="btn rounded-5 px-4 text-white" style="background-color: rgb(240, 151, 119); border: none; height: 43px;">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <!-- footer -->
+        <footer class="mt-5 mb-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Cột Thông tin doanh nghiệp -->
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <h5>Thông tin doanh nghiệp</h5>
+                        <ul class="mt-3 ps-0" style="list-style: none;">
+                            <li class="mt-2"><strong>Văn phòng:</strong> Tầng 2, CT1 Chung cư Eco Green City - 286 Đ. Nguyễn Xiển, Tân Triều, Hoàng Mai, Hà Nội.</li>
+                            <li class="mt-2"><strong>Xưởng sản xuất 1:</strong> Ngõ 215 Triều Khúc, Tân Triều, Thanh Trì, Hà Nội.</li>
+                            <li class="mt-2"><strong>Xưởng sản xuất 2:</strong> Số 24 Ngõ 454 Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội.</li>
+                            <li class="mt-2"><strong>Xưởng sản xuất 3:</strong> 59/1C Ấp Nam Lân, Bà Điểm, Hóc Môn, Hồ Chí Minh.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột Danh mục sản phẩm -->
+                    <div class="col-6 col-md-3 col-lg-2 mb-4">
+                        <h5>Danh mục sản phẩm</h5>
+                        <ul class="mt-3 ps-0" style="list-style: none;">
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Băng dính</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Hộp carton</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Xốp nổ</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Màng PE</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột Hỗ trợ khách hàng -->
+                    <div class="col-6 col-md-3 col-lg-3 mb-4">
+                        <h5>Hỗ trợ khách hàng</h5>
+                        <ul class="mt-3 ps-0" style="list-style: none;">
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Hướng dẫn mua hàng</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Chính sách vận chuyển</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Chính sách bảo hành</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Đổi trả sản phẩm</a></li>
+                            <li class="mt-2"><a href="#" class="text-decoration-none text-dark">Bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cột Kết nối với chúng tôi -->
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+                        <h5>Kết nối với chúng tôi</h5>
+                        <div class="mt-3">
+                            <a href="#"><img src="/icon/facebook-1-svgrepo-com.svg" alt="Facebook" class="me-2" style="height: 30px; width: 30px;"></a>
+                            <a href="#"><img src="/icon/instagram-1-svgrepo-com.svg" alt="Instagram" class="me-2" style="height: 30px; width: 30px;"></a>
+                            <a href="#"><img src="/icon/twitter-svgrepo-com.svg" alt="Twitter" class="me-2" style="height: 30px; width: 30px;"></a>
+                            <a href="#"><img src="/icon/mail-svgrepo-com.svg" alt="Email" class="me-2" style="height: 30px; width: 30px;"></a>
+                        </div>
+        
+                        <h5 class="mt-4">Phương thức thanh toán</h5>
+                        <img src="/img/payment.jpeg" alt="Phương thức thanh toán" class="mt-3 img-fluid rounded" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end -->
+        <div class="fixed-bottom text-white py-2" style="background-color: rgb(138, 170, 138); color: white;">
+            <div class="container">
+                <div class="row align-items-center text-center">
+                    
+                    <div class="col-4 border-end border-light">
+                        <img src="/icon/button-mua-ngay.gif" alt="Mua ngay" class="img-fluid" style="max-height: 40px;">
+                    </div>
+                    
+                    
+                    <div class="col-4" style="font-size: 16px;">
+                        <strong>Hotline:</strong>
+                        <a class="ms-1 text-white text-decoration-none" href="tel:0889813652">0889813652</a>
+                    </div>
+                    
+                    
+                    <div class="col-4 border-start boeder-light">
+                        <strong>Zalo:</strong>
+                        <a href="#">
+                            <img src="/icon/zalo-100x100.png" alt="Zalo" class="ms-1" style="height: 40px; width: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

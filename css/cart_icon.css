@@ -1,0 +1,65 @@
+/* css_cart */
+.icon-container {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #ae9292;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.icon-handle {
+    position: absolute;
+    top: -14px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ae9292;
+    border-radius: 15px 15px 0 0;
+    background-color: white;
+}
+.icon-plus {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+.icon-plus::before,
+.icon-plus::after {
+    content: "";
+    position: absolute;
+    background-color: #ae9292;
+}
+.icon-plus::before {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.icon-plus::after {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+#cart:hover {
+    background-color: #ae9292;
+    color: white;
+}
+#cart:hover .icon-plus::before,
+#cart:hover .icon-plus::after {
+    background-color: aliceblue !important;
+}
+#cart:hover .icon-handle {
+    top: -18px;
+}
+
+/* htmt_cart*/
+/* 
+<div class="icon-container" id="cart">
+    <div class="icon-handle"></div>
+    <div class="icon-plus"></div>
+</div>
+*/

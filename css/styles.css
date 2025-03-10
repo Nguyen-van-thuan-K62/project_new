@@ -1,0 +1,183 @@
+#search, #phone, #email:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important; 
+}
+
+.nav-link.active {
+    background-color: rgb(210, 141, 13);
+    color: white !important;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+
+.dropdown-menu li {
+    padding: 5px 25px;
+}
+
+.dropdown-item {
+    border-bottom: 2px solid #e6e1e1; 
+}
+
+#navbar {
+    width: 100%;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1000;
+    background-color: rgb(138, 170, 138);
+}
+
+.nav-item:hover {
+    border-radius: 3px;
+    background-color: rgb(210, 141, 13);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.nav-item > a:hover {
+    color: antiquewhite !important;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block; 
+    transition: transform 0.3xs ease-in-out;  
+}
+
+#img_container {
+    position: relative;
+    max-height:170px;
+}
+
+#section_card:hover {
+    border: 1xpx solid rgb(219, 208, 208) !important;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.1s ease;
+}
+#section_card:hover #img_container {
+    border-bottom: 1px solid rgb(219, 208, 208) !important;
+}
+#section_card:hover #cart {
+    display: flex !important;  
+}
+
+/* 820 */
+@media screen and (max-width: 992px) {
+
+    .container {
+        max-width: 100% !important;     
+    }
+
+    #header img {
+        position: fixed;
+        top: 0;
+        margin-left: 250px;
+    }
+    
+    #navbar {
+        position:absolute;
+        background-color: white;
+        top:15px;
+        left:0;
+        height: 50px;
+        width: 70px;
+        border-radius: 5px;
+    }
+
+    .nav-link {
+        background-color: white;
+        width: auto;
+        height: auto;
+    }
+
+    #navbarNav {
+        position: fixed;
+        background-color: white;
+        height: 100%;
+        width: auto;
+        top:0;
+        left: 0;
+        overflow: hidden;
+        opacity:1;
+        overflow: auto;
+    }
+
+    .nav-item{
+        margin-left: 20px;
+        margin-top : 10px;
+        border-bottom: 1px solid rgb(205, 189, 189);
+    }
+
+    .nav-item:hover {
+        border-radius: 3px;
+        background-color:white;
+        transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt mượt */
+    }
+
+    .nav-item > a:hover {
+        color: rgb(10, 10, 10) !important;
+    }
+
+    #div_icon_cart {
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+
+    #div_logo {
+        position: relative;
+        top:0;
+        width: 100px;
+        margin: auto;
+    }
+
+    #div_input_search {
+        background-color: rgb(138, 170, 138);
+        text-align: center !important;
+        width: 100%;
+        height: 55px;
+        transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt mượt */
+        z-index: 1000;
+    }
+
+    #div_input_search>div{
+        background-color:azure;
+        margin-top: 5px;
+    }
+    #nav-input {
+        display: flex !important;
+    }
+
+    #navbarNav {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateX(0);
+        opacity: 0.9;
+        visibility: visible;
+    }
+
+    #navbarNav.hidden {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-link.active {
+        background-color: rgb(207, 191, 191);
+        border-radius: 5px;
+    }
+
+    #menu_login, #menu_new, #icon_menu {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html{
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 14px;
+    }
+
+}

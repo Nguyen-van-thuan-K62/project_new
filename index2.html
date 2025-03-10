@@ -7,8 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"> -->
     <script src="/scrip.js"></script>   
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cart_icon.css">
 </head>
 <body>
     <div class="w-100">
@@ -23,7 +26,7 @@
                 </div>
 
                 <!-- Thanh tìm kiếm -->
-                <div class="col-14 col-md-6 col-lg-7 text-md-center" id="div_input_search">
+                <div class="col-14 col-md-6 col-lg-7 text-md-center align-items-center" id="div_input_search">
                     <div class="border border-2 rounded-3 d-flex align-items-center">
                         <input type="text" class="form-control border-0" placeholder="Tìm kiếm sản phẩm, danh mục..." id="search">
                         <button class="bg-white border-0 p-2 me-1">
@@ -42,13 +45,15 @@
             </div>
         </header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg" id="navbar">
+        <nav class="navbar navbar-expand-lg" id="navbar" style="height:40px;">
             <div class="container">
+                <!-- nút menu ở điện thoại và ipad -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="menuButton">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="d-flex d-none justify-content-between" id="nav-input">
+                     <!-- thanh tìm kiếm và exit -->
+                    <div class="d-flex d-none justify-content-between ms-4" id="nav-input">
                         <div class="d-flex border border-2 rounded-3 mt-5">
                             <input type="text" class="form-control border-0" placeholder="Tìm kiếm sản phẩm, danh mục..." id="search">
                             <button class="bg-white border-0 p-2 me-1">
@@ -59,6 +64,7 @@
                             <button id="exit" class="border-0 bg-light">X</button>
                         </div>
                     </div>
+                    <!-- menu chính -->
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#" class="nav-link active">TRANG CHỦ</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">GIỚI THIỆU</a></li>
@@ -106,7 +112,7 @@
                                 <li><a class="dropdown-item" href="#">Túi niêm phong</a></li>
                             </ul>
                         </li>
-        
+
                         <!-- DỊCH VỤ -->
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DỊCH VỤ</a>
@@ -118,11 +124,21 @@
                                 <li><a class="dropdown-item" href="#">In offset</a></li>
                             </ul>
                         </li>
-        
                         <li class="nav-item"><a href="#" class="nav-link">TIN TỨC</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">LIÊN HỆ</a></li>
-                        
+                        <li class="nav-item d-none" id="menu_login"><a href="#" class="nav-link">ĐĂNG NHẬP</a></li>
+                        <li class="nav-item d-none" id="menu_new">
+                            <img src="/icon/mail-svgrepo-com.svg" alt="" style="width: 20px;"> 
+                            <a href="#" class="nav-link ms-2">NEWSLETTER</a>
+                        </li>
                     </ul>
+                    <!--icon liên hệ menu-->
+                    <div class="mt-3 ms-3 d-none" id="icon_menu">
+                        <a href="#"><img src="/icon/facebook-1-svgrepo-com.svg" alt="Facebook" class="me-2" style="height: 30px; width: 30px;"></a>
+                        <a href="#"><img src="/icon/instagram-1-svgrepo-com.svg" alt="Instagram" class="me-2" style="height: 30px; width: 30px;"></a>
+                        <a href="#"><img src="/icon/twitter-svgrepo-com.svg" alt="Twitter" class="me-2" style="height: 30px; width: 30px;"></a>
+                        <a href="#"><img src="/icon/mail-svgrepo-com.svg" alt="Email" class="me-2" style="height: 30px; width: 30px;"></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -169,35 +185,41 @@
         <div class="section-content w-100 bg-light mt-4 py-4">
             <div class="container">
                 <div class="row d-flex align-items-center" >
-                    <div class="col-12 col-md-6" id="video">
-                        <iframe class="w-100 " height='315'src="https://www.youtube.com/embed/EDvsnhQgP9Q" frameborder="0" allowfullscreen></iframe>
+                    <div class="col-12 col-md-6">
+                        <iframe class="w-100 " src="https://www.youtube.com/embed/EDvsnhQgP9Q" frameborder="0" allowfullscreen style="height: 315px;"></iframe>
                     </div>
-                    <div class="col-12 col-md-6 bg-white " id="content">
+                    <div class="col-12 col-md-6 bg-white py-4" style="height: 315px; ">
                         <h4>Băng dính đóng hàng</h4>
                         <p><a href="#" class="text-decoration-none">Bangdinhdonghang.com</a> là Website thương mại điện tử trực thuộc công ty cổ phần Hupuna Group, chuyên cung cấp băng dính đóng hàng, hộp (thùng) carton, màng bọc chống sốc… và các phụ kiện đóng hàng khác. Chúng tôi còn cung cấp dịch vụ tư vấn, thiết kế, in ấn bao bì giúp thương hiệu tiếp cận khách hàng dễ dàng hơn.</p>
                         <div class="text-end mt-3">
                             <a href="#" class="text-decoration-none">Chi tiết >>></a>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
         <!--  section sản phẩm nổi bật-->
         <div class="container mt-5">
             <div class="row align-items-center">
-                <div class="col-8 col-md-10 border-bottom">
+                <div class="col-6 col-md-10 border-bottom text-start">
                     <h4>SẢN PHẨM NỔI BẬT</h4>
                 </div>
-                <div class="col-4 col-md-2 text-end">
-                    <a href="#" class="text-decoration-none">Xem tất cả >>></a>
+                <div class="col-6 col-md-2 text-end">
+                    <a href="#" class="text-decoration-none" id="view_all">Xem tất cả >>></a>
                 </div>
             </div>
         
             <div class="row mt-4 gx-3 gy-4">
                 <!-- Card sản phẩm -->
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="#">
+                            <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
                             <p class="fw-bold text-danger">24.500 ₫</p>
@@ -206,8 +228,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="#">
+                            <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
                             <p class="fw-bold text-danger">31.000 ₫</p>
@@ -216,8 +244,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="#">
+                            <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi giấy...</p>
                             <p class="fw-bold text-danger">63.500 ₫</p>
@@ -226,8 +260,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
                             <p class="fw-bold text-danger">19.000 ₫</p>
@@ -236,8 +276,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
                             <p class="fw-bold text-danger">27.000 ₫</p>
@@ -246,8 +292,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính cuộn 0.4kg lõi thạch...</p>
                             <p class="fw-bold text-danger">58.000 ₫</p>
@@ -259,8 +311,14 @@
             <div class="row mt-1 gx-3 gy-4">
                 <!-- Card sản phẩm -->
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">24.500 ₫</p>
@@ -269,8 +327,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">31.000 ₫</p>
@@ -279,8 +343,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">63.500 ₫</p>
@@ -289,8 +359,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">19.000 ₫</p>
@@ -299,8 +375,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">27.000 ₫</p>
@@ -309,8 +391,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">58.000 ₫</p>
@@ -323,10 +411,10 @@
         <!-- section băng dính đóng hàng -->
         <div class="container mt-5">
             <div class="row">
-                <div class="col-8 col-md-10 border-bottom">
+                <div class="col-6 col-md-10 border-bottom">
                     <h4>BĂNG DÍNH ĐÓNG HÀNG</h4>
                 </div>
-                <div class="col-4 col-md-2 text-end">
+                <div class="col-6 col-md-2 text-end">
                     <a href="#" style="text-decoration: none">Xem tất cả >>></a>
                 </div>
             </div>
@@ -337,8 +425,14 @@
         
             <div class="row mt-4 gx-3 gy-4">
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">24.500 ₫</p>
@@ -347,8 +441,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-thach-cao-nhua-02.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">31.000 ₫</p>
@@ -357,8 +457,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">63.500 ₫</p>
@@ -367,8 +473,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-loi-giay-01.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">19.000 ₫</p>
@@ -377,8 +489,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">27.000 ₫</p>
@@ -387,8 +505,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/bang-dinh-hang-de-vo-3.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Băng dính hàng dễ vỡ cuộn...</p>
                             <p class="fw-bold text-danger">58.000 ₫</p>
@@ -400,10 +524,10 @@
         <!-- section hộp carton đóng hàng -->
         <div class="container mt-5">
             <div class="row">
-                <div class="col-8 col-md-10 border-bottom">
+                <div class="col-6 col-md-10 border-bottom">
                     <h4>HỘP CARTON ĐÓNG HÀNG</h4>
                 </div>
-                <div class="col-4 col-md-2 text-end">
+                <div class="col-6 col-md-2 text-end">
                     <a href="#" style="text-decoration: none">Xem tất cả >>></a>
                 </div>
             </div>
@@ -414,8 +538,14 @@
         
             <div class="row mt-4 gx-3 gy-4">
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-nap-gai-4.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-nap-gai-4.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Hộp carton 12x8x4cm nắp gài 3...</p>
                             <p class="fw-bold text-danger">24.500 ₫</p>
@@ -424,8 +554,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-nap-gai-5.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-nap-gai-5.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Hộp carton 30x25x6cm nắp gài 3...</p>
                             <p class="fw-bold text-danger">31.000 ₫</p>
@@ -434,18 +570,30 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-doi-khau-6.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-doi-khau-6.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
-                            <p class="card-text">Hộp carton 50x30x20cm nắp đối 3...</p>
+                             <p class="card-text">Hộp carton 50x30x20cm nắp đối 3... </p>
                             <p class="fw-bold text-danger">63.500 ₫</p>
                         </div>
                     </div>
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-doi-khau-7.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-doi-khau-7.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Hộp carton 25x15x15cm nắp đối 3...</p>
                             <p class="fw-bold text-danger">19.000 ₫</p>
@@ -454,8 +602,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-doi-khau-8.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-doi-khau-8.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Hộp carton 25x15x10cm nắp đối 3...</p>
                             <p class="fw-bold text-danger">27.000 ₫</p>
@@ -464,8 +618,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/hop-carton-doi-khau-9.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/hop-carton-doi-khau-9.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Hộp carton 20x20x15cm nắp đối 3...</p>
                             <p class="fw-bold text-danger">58.000 ₫</p>
@@ -477,10 +637,10 @@
         <!-- section sản phẩm khác-->
         <div class="container mt-5">
             <div class="row">
-                <div class="col-8 col-md-10 border-bottom">
+                <div class="col-6 col-md-10 border-bottom">
                     <h4>SẢN PHẨM KHÁC</h4>
                 </div>
-                <div class="col-4 col-md-2 text-end">
+                <div class="col-6 col-md-2 text-end">
                     <a href="#" style="text-decoration: none">Xem tất cả >>></a>
                 </div>
             </div>
@@ -491,8 +651,14 @@
         
             <div class="row mt-4 gx-3 gy-4">
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/dung-cu-cat-bang-dinh-10.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/dung-cu-cat-bang-dinh-10.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Dụng cụ cắt băng dính cầm...</p>
                             <p class="fw-bold text-danger">24.500 ₫</p>
@@ -501,8 +667,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Xốp PE Foam 20mm khổ 1m...</p>
                             <p class="fw-bold text-danger">31.000 ₫</p>
@@ -511,8 +683,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Xốp PE Foam 10mm khổ 1m...</p>
                             <p class="fw-bold text-danger">63.500 ₫</p>
@@ -521,8 +699,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/foam-11.jpg" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Xốp PE Foam 5mm khổ 1m...</p>
                             <p class="fw-bold text-danger">19.000 ₫</p>
@@ -531,8 +715,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Xốp nổ bọc hàng 120cmx100m</p>
                             <p class="fw-bold text-danger">27.000 ₫</p>
@@ -541,8 +731,14 @@
                 </div>
         
                 <div class="col-6 col-md-3 col-xl-2">
-                    <div class="card border shadow-sm">
-                        <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." style="height: 170px;">
+                    <div class="card border shadow-sm position-relative" id="section_card">
+                        <a href="">
+                            <img src="/img/section/xop-no-12.png" class="card-img-top" alt="..." id="img_container">
+                        </a>
+                        <div class="icon-container d-none position-absolute top-50 ms-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thêm vào giỏ hàng" id="cart">
+                            <div class="icon-handle"></div>
+                            <div class="icon-plus"></div>
+                        </div>
                         <div class="card-body text-center">
                             <p class="card-text">Xốp nổ bọc hàng 150cmx100m</p>
                             <p class="fw-bold text-danger">58.000 ₫</p>
@@ -562,17 +758,17 @@
                         <div class="flex-grow-1 border-bottom border-2"></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between border p-2">
-                        <img src="/img/Cac-yeu-to-quan-trong-anh-huong-den-chat-luong-thung-carton-9.jpg" alt="" class="img-fluid me-1 mb-3" style="height: 280px; width: 387px;">
+                        <img src="/img/Cac-yeu-to-quan-trong-anh-huong-den-chat-luong-thung-carton-9.jpg" alt="" class="img-fluid me-1 mb-4" style="height: 276px; width: 387px;">
                         <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between mb-4  text-start">
+                            <div class="d-flex mb-4  text-start">
                                 <img src="/img/news/thung-carton-dung-vai-1.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
                                 <p class="ps-2">Các tiêu chí in hộp đựng vải thiều chất lượng</p>
                             </div>
-                            <div class="d-flex justify-content-between mb-4  text-start">
+                            <div class="d-flex mb-4  text-start">
                                 <img src="/img/news/hop-carton-2.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
                                 <p class="ps-2">Địa chỉ mua hộp carton tại Đống Đa giá rẻ, chất lượng</p>
                             </div>
-                            <div class="d-flex justify-content-between mb-2 text-start">
+                            <div class="d-flex mb-4 text-start">
                                 <img src="/img/news/tem-nhan-decal-3.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
                                 <p class="ps-2">Các loại tem nhãn mác phổ biến hiện nay</p>
                             </div>
@@ -597,7 +793,7 @@
                             <img src="/img/news/hop-carton-5.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
                             <p class="ps-2 flex-grow-1">Đặt thùng carton quận Thanh Xuân theo yêu cầu</p>
                         </div>
-                        <div class="d-flex justify-content-between mb-2 ms-1 text-start">
+                        <div class="d-flex justify-content-between mb-4 ms-1 text-start">
                             <img src="/img/news/Bangdinhdonghang-Xuong-phan-phoi-hop-carton-tai-Thanh-Tri-nhanh-chong-uy-tin-6.jpg" alt="" class="img-fluid" style="height: 76px; width: 100px;">
                             <p class="ps-2 flex-grow-1">[MÁCH BẠN] Xưởng chuyên phân phối hộp carton tại Thanh Trì</p>
                         </div>
@@ -646,7 +842,7 @@
                             <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-end gap-2">
                                 <input type="phone" class="form-control border-0 rounded-5 px-3" placeholder="Số điện thoại" id="phone" style="height: 43px;">
                                 <input type="email" class="form-control border-0 rounded-5 px-3" placeholder="Địa chỉ Email" id="email" style="height: 43px;">
-                                <button type="submit" class="btn rounded-5 px-4 text-white" style="background-color: rgb(240, 151, 119); border: none; height: 43px;">Gửi</button>
+                                <button type="submit" class="btn border-1 rounded-5 px-4 text-white" style="background-color: rgb(240, 151, 119); height: 43px;">Gửi</button>
                             </div>
                         </form>
                     </div>
@@ -712,18 +908,16 @@
             <div class="container">
                 <div class="row align-items-center text-center">
                     
-                    <div class="col-4 border-end border-light">
+                    <div class="col-4">
                         <img src="/icon/button-mua-ngay.gif" alt="Mua ngay" class="img-fluid" style="max-height: 40px;">
                     </div>
                     
-                    
-                    <div class="col-4" style="font-size: 16px;">
+                    <div class="col-4 border-start border-end border-light" style="font-size: 16px;">
                         <strong>Hotline:</strong>
                         <a class="ms-1 text-white text-decoration-none" href="tel:0889813652">0889813652</a>
                     </div>
                     
-                    
-                    <div class="col-4 border-start boeder-light">
+                    <div class="col-4">
                         <strong>Zalo:</strong>
                         <a href="#">
                             <img src="/icon/zalo-100x100.png" alt="Zalo" class="ms-1" style="height: 40px; width: 40px;">

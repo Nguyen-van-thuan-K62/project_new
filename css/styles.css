@@ -77,7 +77,7 @@
     
     #navbar {
         position:absolute;
-        background-color: white;
+        background-color: white !important;
         top:15px;
         left:0;
         height: 50px;
@@ -170,6 +170,9 @@
     #menu_login, #menu_new, #icon_menu {
         display: flex !important;
     }
+    #content, #ytb {
+        max-height: 270px !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -180,4 +183,12 @@
         font-size: 14px;
     }
 
+    #content, #ytb {
+        max-height: 200px !important;
+    }
+
+    #div_input_search>div{
+        background-color:azure;
+        margin-top: 8px;
+    }
 }
